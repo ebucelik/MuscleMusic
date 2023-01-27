@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71094614298464B900C0BA70 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71094613298464B900C0BA70 /* StartView.swift */; };
+		710946162984653200C0BA70 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710946152984653200C0BA70 /* ExerciseView.swift */; };
+		710946182984655600C0BA70 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710946172984655600C0BA70 /* PlaylistView.swift */; };
 		71ADFF6929845EC100C12C7C /* MuscleMusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADFF6829845EC100C12C7C /* MuscleMusicApp.swift */; };
-		71ADFF6B29845EC100C12C7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADFF6A29845EC100C12C7C /* ContentView.swift */; };
+		71ADFF6B29845EC100C12C7C /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ADFF6A29845EC100C12C7C /* AppView.swift */; };
 		71ADFF6D29845EC200C12C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71ADFF6C29845EC200C12C7C /* Assets.xcassets */; };
 		71ADFF7029845EC200C12C7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71ADFF6F29845EC200C12C7C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71094613298464B900C0BA70 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		710946152984653200C0BA70 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		710946172984655600C0BA70 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		71ADFF6529845EC100C12C7C /* MuscleMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71ADFF6829845EC100C12C7C /* MuscleMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleMusicApp.swift; sourceTree = "<group>"; };
-		71ADFF6A29845EC100C12C7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71ADFF6A29845EC100C12C7C /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		71ADFF6C29845EC200C12C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71ADFF6F29845EC200C12C7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +38,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7109460F298463CE00C0BA70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71094613298464B900C0BA70 /* StartView.swift */,
+				710946152984653200C0BA70 /* ExerciseView.swift */,
+				710946172984655600C0BA70 /* PlaylistView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71094610298463D400C0BA70 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		71094611298463EC00C0BA70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		71ADFF5C29845EC100C12C7C = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +81,11 @@
 		71ADFF6729845EC100C12C7C /* MuscleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				71094611298463EC00C0BA70 /* Models */,
+				71094610298463D400C0BA70 /* ViewModels */,
+				7109460F298463CE00C0BA70 /* Views */,
 				71ADFF6829845EC100C12C7C /* MuscleMusicApp.swift */,
-				71ADFF6A29845EC100C12C7C /* ContentView.swift */,
+				71ADFF6A29845EC100C12C7C /* AppView.swift */,
 				71ADFF6C29845EC200C12C7C /* Assets.xcassets */,
 				71ADFF6E29845EC200C12C7C /* Preview Content */,
 			);
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71ADFF6B29845EC100C12C7C /* ContentView.swift in Sources */,
+				710946162984653200C0BA70 /* ExerciseView.swift in Sources */,
+				71094614298464B900C0BA70 /* StartView.swift in Sources */,
+				71ADFF6B29845EC100C12C7C /* AppView.swift in Sources */,
 				71ADFF6929845EC100C12C7C /* MuscleMusicApp.swift in Sources */,
+				710946182984655600C0BA70 /* PlaylistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

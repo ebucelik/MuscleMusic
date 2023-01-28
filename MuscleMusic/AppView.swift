@@ -7,7 +7,17 @@
 
 import SwiftUI
 
+public class ExerciseViewModel: ObservableObject {
+    @Published var exercises: [Exercise]
+
+    init(exercises: [Exercise] = ExerciseView.mockExercises) {
+        self.exercises = exercises
+    }
+}
+
 struct AppView: View {
+    @StateObject var exerciseViewModel: ExerciseViewModel = ExerciseViewModel()
+
     var body: some View {
         TabView {
             StartView()
@@ -25,6 +35,7 @@ struct AppView: View {
                     Image(systemName: "music.quarternote.3")
                 }
         }
+        .environmentObject(exerciseViewModel)
     }
 }
 

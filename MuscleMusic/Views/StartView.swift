@@ -8,15 +8,38 @@
 import SwiftUI
 
 struct StartView: View {
-    var body: some View {
-        Text("Hello, Start!")
-    }
-}
+    @EnvironmentObject var exerciseViewModel: ExerciseViewModel
 
-#if DEBUG
-struct StartView_Previews: PreviewProvider {
-    static var previews: some View {
-        StartView()
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(exerciseViewModel.exercises) { exercise in
+                        NavigationLink {
+                            StartDetailView(exercise: exercise)
+                        } label: {
+                            HStack {
+                                Image(systemName: "play.circle.fill")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(AppColor.backgroundV2)
+
+                                Text(exercise.name)
+                                    .bold()
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .padding()
+                            .background(AppColor.background)
+                            .cornerRadius(6)
+                            .shadow(color: .gray.opacity(0.4), radius: 2, x: 3, y: 3)
+                        }
+
+                    }
+                }
+                .padding()
+            }
+            .navigationBarTitle("Startpage")
+        }
     }
 }
-#endif

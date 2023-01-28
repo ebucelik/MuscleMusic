@@ -41,26 +41,6 @@ extension Playlist {
         )
     }
 
-    static var mockTurkishPop: Playlist {
-        Playlist(
-            name: "Türkisch Pop",
-            song: [
-                Song(
-                    artist: "Demet Akalin",
-                    name: "Affedersen"
-                ),
-                Song(
-                    artist: "Tarkan",
-                    name: "Simarik"
-                ),
-                Song(
-                    artist: "Emir Taha",
-                    name: "Astigmat"
-                )
-            ]
-        )
-    }
-
     static var mockAmiRap: Playlist {
         Playlist(
             name: "US Rap",

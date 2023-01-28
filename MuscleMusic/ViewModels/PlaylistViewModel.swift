@@ -8,7 +8,7 @@
 import SwiftUI
 
 class PlaylistViewModel: ObservableObject {
-    @Published var playlists: [Playlist] = [.mockTurkishPop, .mockAmiRap, .mockGermanRap]
+    @Published var playlists: [Playlist] = [.mockAmiRap, .mockGermanRap]
 
     func addPlaylist(playlist: Playlist) {
         playlists.append(playlist)

@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-class ExerciseViewModel: ObservableObject {
-    @Published var exercises: [Exercise]
-    
-    init(exercises: [Exercise] = ExerciseView.mockExercises) {
-        self.exercises = exercises
-    }
-}
-
 struct Section: Identifiable {
     var id = UUID()
     var name: String
@@ -37,10 +29,9 @@ struct Exercise: Identifiable {
 
 struct ExerciseView: View {
     
-    @StateObject var exerciseViewModel = ExerciseViewModel()
+    @EnvironmentObject var exerciseViewModel: ExerciseViewModel
     
     var body: some View {
-        
         NavigationView {
             ScrollView {
                 VStack {
@@ -72,13 +63,17 @@ struct ExerciseView: View {
 
 extension ExerciseView {
     static let mockSections = [
-        Section(name: "Aufwärmen", playlist: "Playlist 1", info: "1"),
-        Section(name: "Cardio", playlist: "Playlist 2", info: "2")
+        Section(name: "Aufwärmen", playlist: "Playlist 2", info: "10x Sätze"),
+        Section(name: "Brust", playlist: "Playlist 2", info: "8x Sätze"),
+        Section(name: "Biceps", playlist: "Playlist 2", info: "5x Sätze"),
+        Section(name: "Triceps", playlist: "Playlist 2", info: "5x Sätze"),
     ]
     
     static let mockExercises = [
-        Exercise(name: "Montag", sections: mockSections),
-        Exercise(name: "Dienstag", sections: mockSections)
+        Exercise(name: "Push Day", sections: mockSections),
+        Exercise(name: "Pull Day", sections: mockSections),
+        Exercise(name: "Leg Day", sections: mockSections),
+        Exercise(name: "Cardio :/", sections: mockSections)
     ]
 }
 
